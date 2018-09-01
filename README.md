@@ -10,7 +10,7 @@ From
 FROM matoba/node10-puppeteer
 ```
 
-Fix pueppeteer version in package.json
+Fix puppeteer version in package.json
 ```
 "puppeteer": "^1.4.0",
 ```
