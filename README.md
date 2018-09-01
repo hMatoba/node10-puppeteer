@@ -2,8 +2,8 @@
 
 To use puppeteer in Docker container.
 
-OS: Alpine
-Language: Node.js 10
+- OS: Alpine
+- Language: Node.js 10
 
 From
 ```
