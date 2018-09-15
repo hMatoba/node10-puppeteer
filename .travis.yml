@@ -7,5 +7,5 @@ script:
 after_success:
  - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
  - docker push matoba/node10-puppeteer:alpine
- - docker tag matoba/node10-puppeteer:latest
+ - docker tag matoba/node10-puppeteer:alpine matoba/node10-puppeteer:latest
  - docker push matoba/node10-puppeteer:latest
