@@ -1,1 +1,11 @@
+services:
+ - docker
 
+script:
+ - docker build -t matoba/node10-puppeteer:alpine .
+
+after_success:
+ - docker login -u="${DOCKER_USERNAME}" -p="${DOCKER_PASSWORD}"
+ - docker push matoba/node10-puppeteer:alpine
+ - docker tag matoba/node10-puppeteer:latest
+ - docker push matoba/node10-puppeteer:latest
