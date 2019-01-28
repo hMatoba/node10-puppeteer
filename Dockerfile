@@ -8,7 +8,12 @@ RUN apk update && apk upgrade && \
       chromium@edge \
       nss@edge \
       harfbuzz@edge
-
+ENV DOCKERIZE_VERSION v0.6.0
+RUN apk add --no-cache openssl \
+ && wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+ && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+ && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
+ 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV CHROME_BIN /usr/bin/chromium-browser
