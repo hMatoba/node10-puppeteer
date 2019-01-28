@@ -12,7 +12,7 @@ FROM matoba/node10-puppeteer
 
 Fix puppeteer version in package.json
 ```
-"puppeteer": "^1.4.0",
+"puppeteer": "^1.9.0",
 ```
 
 Launch puppeteer with some settings below
