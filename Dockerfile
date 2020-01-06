@@ -19,7 +19,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV CHROME_BIN /usr/bin/chromium-browser
 
 # Puppeteer v1.4.0 works with Chromium 68.
-RUN npm install -g puppeteer@1.9.0
+RUN npm install -g --unsafe-perm puppeteer@1.9.0
 
 # Add user so we don't need --no-sandbox.	
 RUN addgroup -S pptruser && adduser -S -g pptruser pptruser \	
